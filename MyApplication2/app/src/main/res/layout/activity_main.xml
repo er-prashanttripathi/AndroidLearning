@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res/android"
+    app:layout_width="match_parent"
+    app:layout_height="match_parent"
+
+
+>
+
+    <TextView
+        app:id="@+id/happy"
+        app:text="Happy"
+        app:layout_width="wrap_content"
+        app:layout_height="wrap_content"
+        app:textSize="20sp"
+        app:textStyle="bold"
+        app:layout_alignParentLeft="true"
+        app:layout_alignParentBottom="true"
+        app:textColor="@android:color/holo_blue_dark"
+        app:background="@android:color/holo_purple"
+        />
+    <TextView
+        app:layout_width="wrap_content"
+        app:layout_height="wrap_content"
+        app:layout_toRightOf="@id/happy"
+        app:text="rightOf"/>
+
+    <TextView
+        app:id="@+id/bday"
+        app:layout_width="wrap_content"
+        app:layout_height="wrap_content"
+        app:background="@color/teal_200"
+        app:text="B'Day"
+        app:textSize="20sp"
+        app:layout_alignParentRight="true"
+        app:layout_alignParentBottom="true"
+        app:textAlignment="textEnd"
+        app:layout_weight="1"
+        />
+    <TextView
+        app:id="@+id/hey"
+        app:layout_width="wrap_content"
+        app:layout_height="wrap_content"
+        app:text="Hey!"
+        app:textSize="20dp"
+        app:layout_alignParentLeft="true"
+        app:layout_alignParentTop="true"
+        />
+    <TextView
+        app:id="@+id/pt"
+        app:text="prashant"
+        app:layout_width="wrap_content"
+        app:layout_height="wrap_content"
+        app:textSize="25sp"
+        app:background="@color/teal_700"
+        app:layout_alignParentRight="true"
+        app:layout_alignParentTop="true"
+        />
+
+    <TextView
+        app:layout_width="wrap_content"
+        app:layout_height="wrap_content"
+        app:layout_toLeftOf="@id/pt"
+        app:text="leftOf"/>
+
+
+</RelativeLayout>
+

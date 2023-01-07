@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/page3">
+
+    <fragment
+        android:id="@+id/page3"
+        android:name="com.example.android.unorguserapp.FragmentMobNo"
+        android:label="page3"
+        tools:layout="@layout/fragment_mobno" >
+        <action
+            android:id="@+id/action_page3_to_page6"
+            app:destination="@id/page6" />
+    </fragment>
+    <fragment
+        android:id="@+id/page6"
+        android:name="com.example.android.unorguserapp.FragmentBusName"
+        android:label="page6"
+        tools:layout="@layout/fragment_bus_name" >
+        <action
+            android:id="@+id/action_page6_to_page15"
+            app:destination="@id/page15" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/page14"
+        android:name="com.example.android.unorguserapp.FragmentProfile"
+        android:label="page14" >
+
+        <action
+            android:id="@+id/action_page14_to_product_description"
+            app:destination="@id/product_description" />
+    </fragment>
+    <fragment
+        android:id="@+id/page15"
+        android:name="com.example.android.unorguserapp.FragmentBusRegistration"
+        android:label="page15"
+        tools:layout="@layout/fragment_bus_registration" >
+        <action
+            android:id="@+id/action_page15_to_page14"
+            app:destination="@id/page14" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/product_description"
+        android:name="com.example.android.unorguserapp.FragmentProductDescription"
+        android:label="product_description"
+        tools:layout="@layout/fragment_product_description" />
+</navigation>

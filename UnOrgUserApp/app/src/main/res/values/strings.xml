@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">UnOrgUserApp</string>
+    <string name="registration">Registration</string>
+    <string name="Enter_your_shop_name">Enter your Shop Name</string>
+    <string name="Business_Name">Business Name</string>
+    <string name="Enter_Referral_Code">Enter Referral Code</string>
+    <string name="btnaccess">Access</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Mobile_Number">Mobile Number</string>
+    <string name="Enter_Mobile_Number">Enter Mobile Number</string>
+    <string name="Submit">Submit</string>
+    <string name="Language">Language</string>
+    <string name="hindi">हिंदी</string>
+    <string name="English">English</string>
+    <string name="bus_name_hint">Chai Wala</string>
+    <string name="mno_hint">9999999999</string>
+    <string name="btn_update">Update</string>
+    <string name="txt_profile">Profile</string>
+    <string name="txt_busi_name">Thela</string>
+    <string name="txt_language">English</string>
+    <string name="txt_return_order">Return Order</string>
+    <string name="txt_up_add">Update Address</string>
+    <string name="txt_share_app">Share App</string>
+    <string name="txt_about_us">About Us</string>
+    <string name="txt_product_name">Shrestha Aata</string>
+    <string name="txtfragment3">fragment3</string>
+    <string name="txtfragment6">fragment6</string>
+    <string name="txtfragment14">fragment14</string>
+    <string name="txtfragment15">fragment15</string>
+    <string name="btn_add">ADD</string>
+    <string name="product_cost">Rs 200</string>
+    <string name="txt_about_this_item">About this item</string>
+    <string name="txt_description">Picked from the finest wheat field. 100% whole wheat Aata. Get the super quality taste. imparts a good aroma and a fluffy look. Also helps.</string>
+    <string name="txt_200">200</string>
+    <string-array name="cost_list_resource">
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+        <item>2000</item>
+    </string-array>
+</resources>

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">StateFlowExample</string>
+    <string name="heading">Counter App</string>
+    <string name="counter">0</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+</resources>

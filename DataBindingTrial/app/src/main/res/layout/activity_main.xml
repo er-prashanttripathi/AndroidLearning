@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.android.databindingtrial.MainViewModel" />
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        tools:text="Some Random fruits"
+        android:text="@{viewmodel.currentRandomFruitName}"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.143" />
+
+    <Button
+        android:id="@+id/btnChangeFruit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Fruit"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:onClick="@{()->viewmodel.onChangeRandomFruitClick()}"
+        app:layout_constraintTop_toBottomOf="@id/text1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="@color/teal_700"/>
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="60dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Enter a fruit Name"
+        android:text="@={viewmodel.editTextContent}"
+        app:layout_constraintTop_toBottomOf="@id/btnChangeFruit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <Button
+        android:id="@+id/btn_display_edit_text_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Display Edit Text content"
+        android:onClick="@{()->viewmodel.onDisplayEditTextContentClick()}"
+        app:layout_constraintTop_toBottomOf="@id/editText1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:backgroundTint="@color/teal_700"
+        />
+    <TextView
+        android:id="@+id/displayedEditTextContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Content of Edit Text"
+        android:layout_marginHorizontal="50dp"
+        android:text="@{viewmodel.displayedEditTextContent}"
+        app:layout_constraintTop_toBottomOf="@id/btn_display_edit_text_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:onClick="@{()-> viewmodel.onSelectRandomEditTextFruit()}"
+        app:layout_constraintTop_toBottomOf="@id/displayedEditTextContent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:backgroundTint="@color/teal_700"
+        android:text="Select Random for edit text"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

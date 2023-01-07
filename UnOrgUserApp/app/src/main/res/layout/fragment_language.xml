@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".page2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#11A374">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="357dp"
+            android:layout_height="118dp"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/onlinethelalogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="imageView2"
+            tools:layout_editor_absoluteY="56dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="117dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="76dp"
+            android:src="@drawable/languageenh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/Language"
+            android:textColor="@color/white"
+            android:textSize="60dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="395dp" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="top"
+            app:constraint_referenced_ids="textView2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button5"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:icon="@drawable/a"
+            app:iconSize="30dp"
+            android:paddingVertical="10dp"
+            app:iconGravity="textStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:text="@string/English"
+            android:textStyle="bold"
+            android:textSize="32sp"
+
+            android:backgroundTint="@color/white"
+            android:textColor="@color/unorg"
+            app:iconTint="@color/unorg"
+
+            tools:layout_editor_absoluteX="169dp"
+            tools:layout_editor_absoluteY="551dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button6"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="25dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:paddingVertical="10dp"
+            android:text="@string/hindi"
+            android:textColor="@color/unorg"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:icon="@drawable/aaahindi"
+            app:iconGravity="textStart"
+            app:iconPadding="48dp"
+            app:iconSize="30dp"
+            app:iconTint="@color/unorg"
+            tools:layout_editor_absoluteX="73dp"
+            tools:layout_editor_absoluteY="633dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

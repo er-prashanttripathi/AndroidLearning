@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TryLayout</string>
+    <string name="about">About</string>
+    <string name="paragraph">
+        <br>Our aims to provide you with high</br>
+        <br>quality veggies through local sabziwaala</br>
+        <br>at mandi rates.</br>
+
+        <br>Through our services, you can connect</br>
+        <br>to nearest sabziwaala, who will be at</br>
+        <br>your doorstep within 30 minutes for you</br>
+        <br>to handpick and choose fresh fruits and</br>
+        <br>vegetable on your own.</br>
+         </string>
+</resources>

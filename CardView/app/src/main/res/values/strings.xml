@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CardView</string>
+    <string name="txt1">This is recycler view</string>
+    <string name="txt2">Prashant Tripathi</string>
+    <string name="txt3">99999999999</string>
+
+</resources>

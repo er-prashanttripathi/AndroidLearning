@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:state_pressed="true" android:color="#FFEB3B"/> <!--color when we touch-->
+<!--    <item android:state_selected="true" android:color="#FF5722"/>&lt;!&ndash;color changeed to, after we touch&ndash;&gt;-->
+    <item android:color="@color/white"/><!--default color when app is launched-->
+
+</selector>

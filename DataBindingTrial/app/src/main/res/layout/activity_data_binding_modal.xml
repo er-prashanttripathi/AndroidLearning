@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodelnew"
+            type="com.example.android.databindingtrial.DataClassTest" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".dataBindingModal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/texta"
+            android:layout_marginTop="30dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodelnew.tone}" />
+
+        <TextView
+            android:id="@+id/textb"
+            android:layout_marginTop="30dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodelnew.ttwo}"
+            tools:layout_editor_absoluteY="19dp" />
+
+        <TextView
+            android:id="@+id/textc"
+            android:layout_marginTop="30dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodelnew.tthree}"
+            tools:layout_editor_absoluteY="39dp" />
+
+        <TextView
+            android:id="@+id/textd"
+            android:layout_marginTop="30dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodelnew.tfour}"
+            tools:layout_editor_absoluteY="58dp" />
+
+    </LinearLayout>
+</layout>
