@@ -50,7 +50,7 @@ class MainActivity3 : AppCompatActivity() {
 }*/
 private suspend fun printFollowers() {
     val job=  CoroutineScope(Dispatchers.IO).launch {
-    var fbval=async { getFbFollower() }
+        var fbval=async { getFbFollower() }
         var instaval=async { getInstaFollower() }
         Log.d(TAG, "fb-${fbval.await()} insta- ${instaval.await()}")
         Log.d(TAG, "fb-$fbval.a insta- $instaval") // to check for deferred in log
