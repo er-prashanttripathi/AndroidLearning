@@ -2,6 +2,7 @@ package com.example.android.quotesapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -39,9 +40,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onShare(view: View) {
-        val intentvar = Intent(Intent.ACTION_SEND)
-        intent.setType("text/plain")
-        intent.putExtra(Intent.EXTRA_TEXT, mainViewModel.getQuote().text)
-        startActivity(intentvar)
+//        Log.d("mainViewModelText", "onShare: ${mainViewModel.getQuote().text}")
+//        val intentvar = Intent(Intent.ACTION_SEND)
+//        intent.setType("text/plain")
+//        intent.putExtra(Intent.EXTRA_TEXT, mainViewModel.getQuote().text)
+//        startActivity(Intent.createChooser(intentvar,"Share this App Using"))
+//        ------------------------------
+        val intent = Intent()
+        intent.action = Intent.ACTION_SEND
+        intent.putExtra(Intent.EXTRA_TEXT,mainViewModel.getQuote().text)
+        intent.type = "text/plain"
+        startActivity(Intent.createChooser(intent, "Send"))
+//        -------------------------------
     }
 }
