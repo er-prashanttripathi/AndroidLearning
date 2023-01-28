@@ -10,6 +10,7 @@ import retrofit2.http.Query
 //https://newsapi.org/v2/everything?domains=wsj.com&apiKey=0b26dc92503949ddb2d20cd254ded462
 const val BASE_URL="https://newsapi.org/"
 const val API_KEY="0b26dc92503949ddb2d20cd254ded462"
+
 interface NewsInterface {
     @GET("v2/top-headlines?apikey=$API_KEY")
     fun headlines(@Query("country")country:String, @Query("page")page:Int):Call<News>

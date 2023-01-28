@@ -3,14 +3,20 @@ package com.example.android.newslyrecyclerviewretrofit
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.android.newslyrecyclerviewretrofit.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding//Data Binding -1
+    lateinit var adapter: NewsAdapter//to access adapter for recyView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding= DataBindingUtil.setContentView(this,R.layout.activity_main)//Data Binding -2
         getNews()
     }
 
@@ -21,6 +27,11 @@ class MainActivity : AppCompatActivity() {
                 val news = response.body()
                 if (news != null) {
                     Log.d("Api_Calling", news.toString())
+                    adapter= NewsAdapter(this@MainActivity,news.articles)
+
+//                    var newsList=findViewById<RecyclerView>(R.id.newsList)
+                    binding.newsList.adapter=adapter//Data Binding -3
+                    binding.newsList.layoutManager=LinearLayoutManager(this@MainActivity)//Data Binding -4
                 }
             }
 

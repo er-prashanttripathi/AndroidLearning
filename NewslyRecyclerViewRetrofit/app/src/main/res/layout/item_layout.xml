@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <ImageView
+        android:id="@+id/newsImage"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:layout_weight="1"
+        android:src="@mipmap/ic_launcher"/>
+    <TextView
+        android:id="@+id/newsTitle"
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ems="10"
+        android:text="textView"/>
+    <TextView
+        android:layout_marginTop="8dp"
+        android:id="@+id/newsDescription"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:textStyle="italic"
+        android:maxLines="2"
+        android:text="textView"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
+</layout>
