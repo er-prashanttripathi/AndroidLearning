@@ -13,6 +13,7 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding//Data Binding -1
+
     lateinit var adapter: NewsAdapter//to access adapter for recyView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
