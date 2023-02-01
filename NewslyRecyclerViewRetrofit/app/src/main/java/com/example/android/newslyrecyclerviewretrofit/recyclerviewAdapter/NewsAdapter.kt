@@ -2,10 +2,7 @@ package com.example.android.newslyrecyclerviewretrofit
 
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.android.newslyrecyclerviewretrofit.databinding.ItemLayoutBinding
@@ -43,24 +40,32 @@ class NewsAdapter(val context: Context,val articles:List<Article>):RecyclerView.
 */
 //---------------Using Data Binding------------------
 //View HOlder
-class NewsAdapter(val context: Context,val articles:List<Article>):RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>(){
-    class ArticleViewHolder(val binding: ItemLayoutBinding):RecyclerView.ViewHolder(binding.root){
-        var newsImage=binding.newsImage
-        var newsTitle=binding.newsTitle
-        var newsDescription=binding.newsDescription
+class NewsAdapter(val context: Context, val articles: List<Article>) :
+    RecyclerView.Adapter<NewsAdapter.ArticleViewHolder>() {
+    class ArticleViewHolder(val binding: ItemLayoutBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        var newsImage = binding.newsImage
+        var newsTitle = binding.newsTitle
+        var newsDescription = binding.newsDescription
 
 
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
-        val view=LayoutInflater.from(context).inflate(R.layout.item_layout,parent,false)
-        return ArticleViewHolder(ItemLayoutBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        val view = LayoutInflater.from(context).inflate(R.layout.item_layout, parent, false)
+        return ArticleViewHolder(
+            ItemLayoutBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
     }
 
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
-        val article=articles[position]
-        holder.binding.newsTitle.text=article.title
-        holder.binding.newsDescription.text=article.description
+        val article = articles[position]
+        holder.binding.newsTitle.text = article.title
+        holder.binding.newsDescription.text = article.description
 // load image using glide
         Glide
             .with(context)
