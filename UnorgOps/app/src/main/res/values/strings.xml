@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">UnorgOps</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="customer_name">
+        <br>Customer</br>
+        <br>Name</br>
+    </string>
+    <string name="total_weight">
+        <br>Total</br>
+        <br>Weight</br>
+    </string>
+    <string name="order_status">
+         <br>Order</br>
+        <br>Status</br>
+    </string>
+</resources>
