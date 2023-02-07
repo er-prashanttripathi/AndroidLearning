@@ -1,14 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.OrderDetailFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <include layout="@layout/toolbar_order_details"
+        android:id="@+id/toolbarIdOrderDetails"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+<LinearLayout
+    android:id="@+id/ParentLinearlayout"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbarIdOrderDetails"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/layoutCustomerId"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Customer:"
+            android:id="@+id/headingCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           />
+        <TextView
+            android:layout_weight="2"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Samose Wala"
+            android:id="@+id/ValueCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutCusMobileId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Customer Mobile:"
+            android:id="@+id/headingCustomerMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_weight="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="9999999999"
+            android:id="@+id/ValueCustomerMobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutCustOrderTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Order Total:"
+            android:id="@+id/headingCustOrderTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_weight="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="12000"
+            android:id="@+id/ValueCustOrderTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutOrderDue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Order Due:"
+            android:id="@+id/headingOrderDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_weight="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="1000"
+            android:id="@+id/ValueOrderDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutCustomerDue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="Order Due:"
+            android:id="@+id/headingCustomerDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:layout_weight="2"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="1000"
+            android:id="@+id/ValueCustomerDue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="**Reduce Item Quantity According to Availability"
+        android:textSize="16sp"
+        android:textColor="#EE5858"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"/>
+    <TextView
+        android:id="@+id/txtidItemList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Item List"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#716D6D"
+        android:layout_marginHorizontal="10dp"/>
 
-</FrameLayout>
+
+
+</LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ItemListrecyclerView"
+        app:layout_constraintTop_toBottomOf="@id/ParentLinearlayout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:id="@+id/bottomBarLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="SaveChanges"
+            android:layout_weight="1"
+            android:layout_marginRight="3dp"
+            android:textSize="12sp"
+            android:layout_marginStart="3dp"/>
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="RESET"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5dp"/>
+<com.google.android.material.button.MaterialButton
+
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="Cancel"
+    android:layout_weight="1"
+    android:textSize="12sp"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="5dp"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

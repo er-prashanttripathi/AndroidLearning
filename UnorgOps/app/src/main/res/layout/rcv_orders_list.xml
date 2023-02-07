@@ -13,20 +13,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <TextView
             android:id="@+id/txtCName"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
             android:text="Samosa wala"
             android:textAlignment="center"
-            android:textSize="16sp"
             android:textColor="#403D3D"
-            />
+            android:textSize="16sp" />
         <TextView
             android:id="@+id/txtTotalWeight"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:fontFamily="@font/roboto"
             android:layout_height="wrap_content"
             android:text="50 kg"
             android:textAlignment="center"
@@ -34,14 +36,28 @@
             android:textColor="#403D3D"
             />
         <TextView
-            android:id="@+id/txtOrderStatus"
+            android:id="@+id/txtOrder_Confirmed"
             android:layout_width="0dp"
             android:layout_weight="1"
+            android:fontFamily="@font/roboto"
             android:layout_height="wrap_content"
             android:text="Confirmed"
+            android:textColorHint="#11A374"
             android:textAlignment="center"
             android:textSize="16sp"
-            android:textColor="#403D3D"
+            android:textColor="#11A374"
+            />
+        <TextView
+            android:id="@+id/txtOrder_Pending"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
+            android:layout_height="wrap_content"
+            android:text="Pending"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textColor="#F6E868"
             />
 
 
