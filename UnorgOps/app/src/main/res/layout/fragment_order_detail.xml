@@ -5,15 +5,13 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".views.OrderDetailFragment">
-    <include layout="@layout/toolbar_order_details"
-        android:id="@+id/toolbarIdOrderDetails"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"/>
+
+
 <LinearLayout
     android:id="@+id/ParentLinearlayout"
     app:layout_constraintLeft_toLeftOf="parent"
     app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/toolbarIdOrderDetails"
+    app:layout_constraintTop_toTopOf="parent"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical">
@@ -152,16 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
-    <TextView
-        android:id="@+id/txtHint"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="**Reduce Item Quantity According to Availability"
-        android:textSize="16sp"
-        android:textColor="#EE5858"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="30dp"/>
+
     <TextView
         android:id="@+id/txtidItemList"
         android:layout_width="match_parent"
@@ -179,47 +168,94 @@
         android:layout_marginHorizontal="10dp"/>
 
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="Item Name"
+        android:textColor="#1E1A1A"
+        android:fontFamily="@font/inter"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Unit"
+        android:textColor="#1E1A1A"
+        android:fontFamily="@font/inter"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        android:textSize="16sp"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Quantity"
+        android:textColor="#1E1A1A"
+        android:fontFamily="@font/inter"
+        android:textStyle="bold"
+        android:layout_marginStart="30dp"
+        android:textSize="16sp"/>
 
+</LinearLayout>
 </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/ItemListrecyclerView"
         app:layout_constraintTop_toBottomOf="@id/ParentLinearlayout"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginHorizontal="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-    <LinearLayout
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottomBarLayoutId"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="SaveChanges"
-            android:layout_weight="1"
-            android:layout_marginRight="3dp"
-            android:textSize="12sp"
-            android:layout_marginStart="3dp"/>
+        app:layout_constraintRight_toRightOf="parent">
+
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/savebtn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="RESET"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1.5"
+            android:backgroundTint="#11a374"
+            android:text="CONFIRM ORDER"
             android:textSize="12sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnReset"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReset"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="5dp"
             android:layout_weight="1"
-            android:layout_marginHorizontal="5dp"/>
-<com.google.android.material.button.MaterialButton
+            android:text="MAKE CREDIT NOTE"
+            android:textColor="@color/txt_color_black"
+            android:textSize="12sp"
+            app:cornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/savebtn"
+            app:strokeColor="#03162e"
+            app:strokeWidth="2dp" />
 
-    android:layout_width="0dp"
-    android:layout_height="wrap_content"
-    android:text="Cancel"
-    android:layout_weight="1"
-    android:textSize="12sp"
-    android:layout_marginLeft="3dp"
-    android:layout_marginRight="5dp"/>
-
-    </LinearLayout>
-
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

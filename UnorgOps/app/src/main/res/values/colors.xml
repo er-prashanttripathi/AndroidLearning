@@ -10,4 +10,8 @@
     <color name="themeGreen">#11A374</color>
     <color name="colorTransparent">#00000000</color>
     <color name="darkThemeGreen">#238068</color>
+    <color name="txt_color_black">#090B0A</color>
+    #03162E
+    <color name="btn_login_color">#03162E</color>
+
 </resources>

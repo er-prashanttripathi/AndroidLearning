@@ -5,7 +5,74 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".views.MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:background="#03162e"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        >
+        <ImageView
+            android:id="@+id/backSymbolId"
+            android:textAlignment="gravity"
+            android:layout_gravity="left"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_back_symbol"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_constraint_layout"            />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textAlignment="gravity"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orders List"
+            android:layout_toRightOf="@id/backSymbolId"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/backSymbolId"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_constraint_layout"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textAlignment="gravity"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Orders Details"
+            android:layout_toRightOf="@id/backSymbolId"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/backSymbolId"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_constraint_layout"/>
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:textAlignment="gravity"
+            android:layout_gravity="left"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reduce Order Items"
+            android:layout_toRightOf="@id/backSymbolId"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:visibility="gone"
+            app:layout_constraintLeft_toRightOf="@id/backSymbolId"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar_constraint_layout"/>
 
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
@@ -18,7 +85,7 @@
         app:navGraph="@navigation/nav_graph_ops"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_constraint_layout"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
