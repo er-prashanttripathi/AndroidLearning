@@ -1,5 +1,5 @@
 package com.example.android.unootppost
 
-data class MyInterface(
+data class MyDataClass(
     val mobileNo: String
 )
